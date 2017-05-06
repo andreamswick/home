@@ -23,7 +23,7 @@ class Chromecast
     {
         return collect($pictures)->transform(function($pic) {
             return [
-                'image' => str_replace(base_path() . "/public", "", $pic),
+                'image' => env('APP_URL') . str_replace(base_path() . "/public", "", $pic),
             ];
         })->shuffle();
     }
