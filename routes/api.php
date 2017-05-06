@@ -16,3 +16,11 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/weather', function () {
+    return Facades\App\Weather::get(request('lat'), request('long'));
+});
+
+Route::get('/images', function () {
+    return Facades\App\Chromecast::get();
+});
