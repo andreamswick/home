@@ -25,10 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $weather = (new Weather)->get();
-
-        return view('home', [
-            'weather' => $weather
-        ]);
+        return view('home');
     }
 }

@@ -9,12 +9,15 @@
                 <p><img :src="'http://openweathermap.org/img/w/' + weather.condition_icon + '.png'" alt="">
                     {{ weather.condition }}</p>
                 <p>Sunrise: {{ weather.sunrise }} | Sunset: {{ weather.sunset }}</p>
+                <forecast :lat="lat" :long="long"></forecast>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+    import Forecast from './Forecast.vue';
+
     export default {
         data() {
             return {
@@ -72,6 +75,9 @@
                     alert("Geolocation is not supported by this browser.");
                 }
             }
+        },
+        components: {
+            Forecast
         }
     }
 </script>

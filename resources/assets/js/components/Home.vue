@@ -49,6 +49,9 @@
                     this.getImages();
                 }
             }
+        },
+        components: {
+            Clock, Weather
         }
     }
 </script>
@@ -62,10 +65,8 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-    }
-
-    .container {
-        padding-top: 2em;
+        display: flex;
+        align-items: center;
     }
 
     .row-eq-height {
@@ -77,8 +78,15 @@
 
     .panel {
         height: 100%;
-        background-color: rgba(51, 51, 51, 0.53);
+        background-color: rgba(51, 51, 51, 0.65);
         border-color: transparent;
         color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .panel-body {
+        width: 100%;
     }
 </style>

@@ -18,7 +18,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/weather', function () {
-    return Facades\App\Weather::get(request('lat'), request('long'));
+    return Facades\App\Weather::now(request('lat'), request('long'));
+});
+
+Route::get('/forecast', function () {
+    return Facades\App\Weather::forecast(request('lat'), request('long'));
 });
 
 Route::get('/images', function () {
