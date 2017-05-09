@@ -1,5 +1,5 @@
 <template>
-    <div class="col-xs-6">
+    <div class="col-xs-5">
         <div class="panel panel-default">
             <div class="panel-body text-center">
                 <h1>{{ time }}</h1>

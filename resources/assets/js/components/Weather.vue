@@ -1,5 +1,5 @@
 <template>
-    <div class="col-xs-6">
+    <div class="col-xs-7">
         <div class="panel panel-default" v-if="weather">
             <div class="panel-body text-center">
                 <h4>Currently in {{ weather.city }}:</h4>

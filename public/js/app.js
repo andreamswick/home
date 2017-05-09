@@ -47959,7 +47959,7 @@ module.exports = Component.exports
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "col-xs-6"
+    staticClass: "col-xs-7"
   }, [(_vm.weather) ? _c('div', {
     staticClass: "panel panel-default"
   }, [_c('div', {
@@ -47990,7 +47990,7 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "col-xs-6"
+    staticClass: "col-xs-5"
   }, [_c('div', {
     staticClass: "panel panel-default"
   }, [_c('div', {
