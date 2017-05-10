@@ -36,18 +36,3 @@
         }
     }
 </script>
-
-<style>
-    .forecast {
-        border-top: 1px dashed #cbcbcb;
-        padding-top: 5px;
-        display: flex;
-    }
-    .day {
-        flex: 1;
-    }
-
-    .day p {
-        margin-bottom: 5px;
-    }
-</style>

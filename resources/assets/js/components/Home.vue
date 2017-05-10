@@ -61,38 +61,3 @@
         }
     }
 </script>
-
-<style>
-    section {
-        width: 100%;
-        height: 100vh;
-        background: #333333 url(/img/chromecast/1200_YosemiteFalls.jpg) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        display: flex;
-        align-items: center;
-    }
-
-    .row-eq-height {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display:         flex;
-    }
-
-    .panel {
-        height: 100%;
-        background-color: rgba(51, 51, 51, 0.65);
-        border-color: transparent;
-        color: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .panel-body {
-        width: 100%;
-    }
-</style>
