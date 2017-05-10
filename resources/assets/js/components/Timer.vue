@@ -2,7 +2,6 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <h1 class="text-center" v-if="end">{{ minutes }}:{{ seconds }}</h1>
-            <h1 class="text-center" v-if="hasEnded">Time's up!</h1>
             <div class="row">
                 <div class="col-md-6">
                     <button class="btn btn-primary btn-block" v-on:click="start(25)">25 minutes</button>
@@ -24,12 +23,12 @@
             return {
                 end: '',
                 now: '',
-                interval: '',
-                hasEnded: false,
+                interval: ''
             }
         },
         methods: {
             start(minutes) {
+                this.hasEnded = false;
                 this.end = Math.trunc(moment().add(minutes, 'm').toDate() / 1000);
 
                 this.interval = setInterval(() => {
@@ -43,7 +42,6 @@
         },
         computed: {
             seconds() {
-                console.log(this.end - this.now);
                 return (this.end - this.now) % 60;
             },
             minutes() {
@@ -56,7 +54,7 @@
                     clearInterval(this.interval);
                     this.end = '';
                     this.now = '';
-                    this.hasEnded = true;
+                    this.$emit('timerEnded');
                 }
             }
         }

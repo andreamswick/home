@@ -7,10 +7,11 @@
                 </div>
                 <div class="col-xs-5">
                     <clock></clock>
-                    <timer></timer>
+                    <timer v-on:timerEnded="showTimerModal = true"></timer>
                 </div>
             </div>
         </div>
+        <timer-modal v-if="showTimerModal" @close="showTimerModal = false"></timer-modal>
     </section>
 </template>
 
@@ -18,15 +19,14 @@
     import Clock from './Clock.vue';
     import Weather from './Weather.vue';
     import Timer from './Timer.vue';
+    import TimerModal from './TimerModal.vue';
 
     export default {
         data() {
             return {
                 images: {},
                 image: '',
-                user: '',
-                user_image: '',
-                tags: ''
+                showTimerModal: true,
             }
         },
         created() {
@@ -57,7 +57,7 @@
             }
         },
         components: {
-            Clock, Weather, Timer
+            Clock, Weather, Timer, TimerModal
         }
     }
 </script>
