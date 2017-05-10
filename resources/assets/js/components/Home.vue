@@ -7,6 +7,7 @@
                 </div>
                 <div class="col-xs-5">
                     <clock></clock>
+                    <timer></timer>
                 </div>
             </div>
         </div>
@@ -16,6 +17,7 @@
 <script>
     import Clock from './Clock.vue';
     import Weather from './Weather.vue';
+    import Timer from './Timer.vue';
 
     export default {
         data() {
@@ -55,7 +57,7 @@
             }
         },
         components: {
-            Clock, Weather
+            Clock, Weather, Timer
         }
     }
 </script>
