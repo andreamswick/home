@@ -27,9 +27,9 @@ class Weather
     {
         return [
             'city'           => array_get($weather, 'name'),
-            'temp'           => array_get($weather, 'main.temp'),
-            'low'            => array_get($weather, 'main.temp_min'),
-            'high'           => array_get($weather, 'main.temp_max'),
+            'temp'           => round(array_get($weather, 'main.temp')),
+            'low'            => round(array_get($weather, 'main.temp_min')),
+            'high'           => round(array_get($weather, 'main.temp_max')),
             'sunrise'        => $this->getTime(array_get($weather, 'sys.sunrise')),
             'sunset'         => $this->getTime(array_get($weather, 'sys.sunset')),
             'condition'      => title_case(array_get($weather, 'weather.0.description')),
@@ -39,10 +39,11 @@ class Weather
 
     private function transformForecast($forecast)
     {
-        return collect($forecast)->map(function($day) {
+        return collect($forecast)->map(function ($day) {
             return [
-                'low'            => array_get($day, 'temp.min'),
-                'high'           => array_get($day, 'temp.max'),
+                'date'           => Carbon::createFromTimestamp(array_get($day, 'dt'))->format('D'),
+                'low'            => round(array_get($day, 'temp.min')),
+                'high'           => round(array_get($day, 'temp.max')),
                 'condition'      => title_case(array_get($day, 'weather.0.description')),
                 'condition_icon' => array_get($day, 'weather.0.icon'),
             ];
