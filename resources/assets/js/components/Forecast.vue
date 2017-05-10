@@ -1,8 +1,8 @@
 <template>
     <div class="forecast">
         <div class="day" v-for="day in forecast">
+            <p>{{ day.date }}</p>
             <p><img :src="'http://openweathermap.org/img/w/' + day.condition_icon + '.png'" alt=""></p>
-
             <p>{{ day.low }}&deg <br> {{ day.high }}&deg</p>
         </div>
     </div>
@@ -45,5 +45,9 @@
     }
     .day {
         flex: 1;
+    }
+
+    .day p {
+        margin-bottom: 5px;
     }
 </style>

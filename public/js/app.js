@@ -48038,7 +48038,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, _vm._l((_vm.forecast), function(day) {
     return _c('div', {
       staticClass: "day"
-    }, [_c('p', [_c('img', {
+    }, [_c('p', [_vm._v(_vm._s(day.date))]), _vm._v(" "), _c('p', [_c('img', {
       attrs: {
         "src": 'http://openweathermap.org/img/w/' + day.condition_icon + '.png',
         "alt": ""
@@ -57992,7 +57992,7 @@ module.exports = __webpack_require__(127);
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(153)();
-exports.push([module.i, "\n.forecast {\n    border-top: 1px dashed #cbcbcb;\n    padding-top: 5px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.day {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\n", ""]);
+exports.push([module.i, "\n.forecast {\n    border-top: 1px dashed #cbcbcb;\n    padding-top: 5px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n}\n.day {\n    -webkit-box-flex: 1;\n        -ms-flex: 1;\n            flex: 1;\n}\n.day p {\n    margin-bottom: 5px;\n}\n", ""]);
 
 /***/ }),
 /* 179 */
