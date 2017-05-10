@@ -26,7 +26,7 @@
             return {
                 images: {},
                 image: '',
-                showTimerModal: true,
+                showTimerModal: false,
             }
         },
         created() {

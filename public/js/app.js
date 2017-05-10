@@ -17409,7 +17409,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             images: {},
             image: '',
-            showTimerModal: true
+            showTimerModal: false
         };
     },
     created: function created() {
