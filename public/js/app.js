@@ -17290,8 +17290,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 
 
@@ -17390,6 +17388,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -17443,8 +17445,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Forecast_vue__ = __webpack_require__(159);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Forecast_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__Forecast_vue__);
-//
-//
 //
 //
 //
@@ -47958,9 +47958,7 @@ module.exports = Component.exports
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "col-xs-7"
-  }, [(_vm.weather) ? _c('div', {
+  return (_vm.weather) ? _c('div', {
     staticClass: "panel panel-default"
   }, [_c('div', {
     staticClass: "panel-body text-center"
@@ -47969,12 +47967,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "src": 'http://openweathermap.org/img/w/' + _vm.weather.condition_icon + '.png',
       "alt": ""
     }
-  }), _vm._v("\n                " + _vm._s(_vm.weather.condition))]), _vm._v(" "), _c('p', [_vm._v("Sunrise: " + _vm._s(_vm.weather.sunrise) + " | Sunset: " + _vm._s(_vm.weather.sunset))]), _vm._v(" "), _c('forecast', {
+  }), _vm._v("\n            " + _vm._s(_vm.weather.condition))]), _vm._v(" "), _c('p', [_vm._v("Sunrise: " + _vm._s(_vm.weather.sunrise) + " | Sunset: " + _vm._s(_vm.weather.sunset))]), _vm._v(" "), _c('forecast', {
     attrs: {
       "lat": _vm.lat,
       "long": _vm.long
     }
-  })], 1)]) : _vm._e()])
+  })], 1)]) : _vm._e()
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -47990,12 +47988,10 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "col-xs-5"
-  }, [_c('div', {
     staticClass: "panel panel-default"
   }, [_c('div', {
     staticClass: "panel-body text-center"
-  }, [_c('h1', [_vm._v(_vm._s(_vm.time))]), _vm._v(" "), _c('h2', [_vm._v(_vm._s(_vm.date))])])])])
+  }, [_c('h1', [_vm._v(_vm._s(_vm.time))]), _vm._v(" "), _c('h2', [_vm._v(_vm._s(_vm.date))])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -48018,7 +48014,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container"
   }, [_c('div', {
     staticClass: "row row-eq-height"
-  }, [_c('weather'), _vm._v(" "), _c('clock')], 1)])])
+  }, [_c('div', {
+    staticClass: "col-xs-7"
+  }, [_c('weather')], 1), _vm._v(" "), _c('div', {
+    staticClass: "col-xs-5"
+  }, [_c('clock')], 1)])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

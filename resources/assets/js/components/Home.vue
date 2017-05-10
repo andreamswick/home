@@ -2,8 +2,12 @@
     <section :style="{ 'background-image': 'url(' + image + ')' }">
         <div class="container">
             <div class="row row-eq-height">
-                <weather></weather>
-                <clock></clock>
+                <div class="col-xs-7">
+                    <weather></weather>
+                </div>
+                <div class="col-xs-5">
+                    <clock></clock>
+                </div>
             </div>
         </div>
     </section>
