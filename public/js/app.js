@@ -17467,7 +17467,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -48098,7 +48097,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_c('div', {
     staticClass: "col-md-6"
   }, [_c('button', {
-    staticClass: "btn btn-primary btn-block",
+    staticClass: "btn btn-default btn-block",
     on: {
       "click": function($event) {
         _vm.start(25)
@@ -48107,20 +48106,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("25 minutes")])]), _vm._v(" "), _c('div', {
     staticClass: "col-md-6"
   }, [_c('button', {
-    staticClass: "btn btn-primary btn-block",
+    staticClass: "btn btn-default btn-block",
     on: {
       "click": function($event) {
         _vm.start(5)
       }
     }
-  }, [_vm._v("5 minutes")]), _vm._v(" "), _c('button', {
-    staticClass: "btn btn-primary btn-block",
-    on: {
-      "click": function($event) {
-        _vm.start(.25)
-      }
-    }
-  }, [_vm._v(".25 minutes")])])])])])
+  }, [_vm._v("5 minutes")])])])])])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

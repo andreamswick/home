@@ -4,11 +4,10 @@
             <h1 class="text-center" v-if="end">{{ minutes }}:{{ seconds }}</h1>
             <div class="row">
                 <div class="col-md-6">
-                    <button class="btn btn-primary btn-block" v-on:click="start(25)">25 minutes</button>
+                    <button class="btn btn-default btn-block" v-on:click="start(25)">25 minutes</button>
                 </div>
                 <div class="col-md-6">
-                    <button class="btn btn-primary btn-block" v-on:click="start(5)">5 minutes</button>
-                    <button class="btn btn-primary btn-block" v-on:click="start(.25)">.25 minutes</button>
+                    <button class="btn btn-default btn-block" v-on:click="start(5)">5 minutes</button>
                 </div>
             </div>
         </div>
