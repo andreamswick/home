@@ -55,7 +55,7 @@
     }
 
     .modal-body h1 {
-        font-size: 150px;
+        font-size: 75px;
     }
 
     /*
