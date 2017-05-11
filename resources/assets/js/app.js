@@ -17,6 +17,14 @@ window.Vue = require('vue');
 
 Vue.component('home', require('./components/Home.vue'));
 
+Vue.filter('two_digits', function (value) {
+    if(value.toString().length <= 1)
+    {
+        return "0"+value.toString();
+    }
+    return value.toString();
+});
+
 const app = new Vue({
     el: '#app'
 });

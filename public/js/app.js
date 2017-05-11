@@ -16422,8 +16422,15 @@ window.Vue = __webpack_require__(175);
 
 Vue.component('home', __webpack_require__(162));
 
+Vue.filter('two_digits', function (value) {
+    if (value.toString().length <= 1) {
+        return "0" + value.toString();
+    }
+    return value.toString();
+});
+
 var app = new Vue({
-  el: '#app'
+    el: '#app'
 });
 
 /***/ }),
@@ -48221,7 +48228,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "panel-body"
   }, [(_vm.end) ? _c('h1', {
     staticClass: "text-center"
-  }, [_vm._v(_vm._s(_vm.minutes) + ":" + _vm._s(_vm.seconds))]) : _vm._e(), _vm._v(" "), _c('div', {
+  }, [_vm._v(_vm._s(_vm._f("two_digits")(_vm.minutes)) + ":" + _vm._s(_vm._f("two_digits")(_vm.seconds)))]) : _vm._e(), _vm._v(" "), _c('div', {
     staticClass: "row"
   }, [_c('div', {
     staticClass: "col-md-6"

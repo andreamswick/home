@@ -1,7 +1,7 @@
 <template>
     <div class="panel panel-default">
         <div class="panel-body">
-            <h1 class="text-center" v-if="end">{{ minutes }}:{{ seconds }}</h1>
+            <h1 class="text-center" v-if="end">{{ minutes | two_digits }}:{{ seconds | two_digits }}</h1>
             <div class="row">
                 <div class="col-md-6">
                     <button class="btn btn-outline-white btn-block" v-on:click="start(25)">25 minutes</button>
