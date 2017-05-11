@@ -1,0 +1,11 @@
+.btn-outline-white {
+  color: #ffffff;
+  background-color: transparent;
+  border-color: #ffffff;
+  margin-bottom: 5px;
+
+  &:hover {
+    background-color: #ffffff;
+    color: #636b6f;
+  }
+}
