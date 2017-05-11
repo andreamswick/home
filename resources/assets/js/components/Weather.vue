@@ -5,7 +5,7 @@
             <h1>{{ weather.temp }}&deg</h1>
             <p>Low: {{ weather.low }}&deg | High: {{ weather.high }}&deg</p>
 
-            <p><img :src="'https://openweathermap.org/img/w/' + weather.condition_icon + '.png'" alt="">
+            <p><img :src="'/img/weather-icons/' + weather.condition_icon + '.png'" alt="">
                 {{ weather.condition }}</p>
             <p>Sunrise: {{ weather.sunrise }} | Sunset: {{ weather.sunset }}</p>
             <forecast :lat="lat" :long="long"></forecast>
