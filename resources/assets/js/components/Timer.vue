@@ -27,16 +27,11 @@
         },
         methods: {
             start(minutes) {
-                this.hasEnded = false;
                 this.end = Math.trunc(moment().add(minutes, 'm').toDate() / 1000);
 
                 this.interval = setInterval(() => {
                     this.now = Math.trunc((new Date()).getTime() / 1000);
                 },1000);
-
-                if((this.end - this.now) < 0) {
-                    clearInterval(this.interval);
-                }
             }
         },
         computed: {
