@@ -7,11 +7,12 @@
                 </div>
                 <div class="col-xs-5">
                     <clock></clock>
-                    <timer v-on:timerEnded="showTimerModal = true"></timer>
+                    <timer v-on:timerEnded="showTimerModal"></timer>
                 </div>
             </div>
         </div>
-        <timer-modal v-if="showTimerModal" @close="showTimerModal = false"></timer-modal>
+        <timer-modal v-if="timerModal" @close="hideTimerModal"></timer-modal>
+        <audio ref="sound" :src="'/sounds/' + sound"></audio>
     </section>
 </template>
 
@@ -26,10 +27,21 @@
             return {
                 images: {},
                 image: '',
-                showTimerModal: false,
+                timerModal: false,
+                sounds: [
+                    'lone_ranger.mp3',
+                    'sandstorm.mp3',
+                    'sherlock.mp3',
+                    'star_trek.mp3',
+                    'star_wars.mp3',
+                    'super_mario_bros.mp3',
+                    'tequila.mp3',
+                ],
+                sound: ''
             }
         },
         created() {
+            this.sound = this.sounds[Math.floor(Math.random() * this.sounds.length)];
             this.getImages();
             setInterval(this.setBackground, 1800000);
         },
@@ -37,7 +49,7 @@
             getImages() {
                 let self = this;
                 axios.get('/api/images')
-                    .then(function(response) {
+                    .then(function (response) {
                         self.images = response.data;
                         self.setBackground();
                     });
@@ -54,6 +66,17 @@
                 else {
                     this.getImages();
                 }
+            },
+            showTimerModal() {
+                this.timerModal = true;
+                this.$refs.sound.loop = true;
+                this.$refs.sound.play()
+            },
+            hideTimerModal() {
+                this.timerModal = false;
+                this.$refs.sound.pause();
+                this.$refs.sound.currentTime = 0;
+                this.sound = this.sounds[Math.floor(Math.random() * this.sounds.length)];
             }
         },
         components: {
