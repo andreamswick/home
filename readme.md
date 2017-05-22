@@ -18,8 +18,8 @@ andreamswick@gmail.com
 
 ## ToDo
 
-- Stop Timer
-- Fix beginning glitch
+- ~~Stop Timer~~
+- ~~Fix beginning glitch~~
 - Pause Timer
 - Switch icons to something prettier
 - Switch weather api (maybe)
