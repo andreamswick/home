@@ -20,6 +20,7 @@ andreamswick@gmail.com
 
 - ~~Stop Timer~~
 - ~~Fix beginning glitch~~
+- Show .25 timer only in dev
 - Pause Timer
 - Switch icons to something prettier
 - Switch weather api (maybe)
@@ -29,5 +30,6 @@ andreamswick@gmail.com
   - Default GPS Positions
   - Default date/time format
   - Timer Durations
+  - Timer Sounds (Zedge API maybe)
 - Add actual Images API
 - Appear nicer on phones
