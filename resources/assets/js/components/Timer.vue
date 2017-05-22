@@ -11,7 +11,7 @@
                 </div>
                 <div class="col-md-4">
                     <button class="btn btn-outline-white btn-block" v-on:click="start(60)">60 minutes</button>
-                    <button class="btn btn-outline-white btn-block" v-on:click="start(.25)">.25 minutes</button>
+                    <button class="btn btn-outline-white btn-block" v-if="! isProduction" v-on:click="start(.25)">.25 minutes</button>
                 </div>
             </div>
             <div class="row">
@@ -40,7 +40,6 @@
                 this.now = Math.trunc((new Date()).getTime() / 1000);
 
                 this.interval = setInterval(() => {
-                    console.log(this.now, this.end);
                     this.now = Math.trunc((new Date()).getTime() / 1000);
                 },1000);
             },
@@ -58,6 +57,9 @@
             minutes() {
                 return Math.trunc((this.end - this.now) / 60) % 60;
             },
+            isProduction() {
+                return window.Laravel.env === 'production';
+            }
         },
         watch: {
             now: function() {

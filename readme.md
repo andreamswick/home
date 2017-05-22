@@ -20,7 +20,7 @@ andreamswick@gmail.com
 
 - ~~Stop Timer~~
 - ~~Fix beginning glitch~~
-- Show .25 timer only in dev
+- ~~Show .25 timer only in dev~~
 - Pause Timer
 - Switch icons to something prettier
 - Switch weather api (maybe)
