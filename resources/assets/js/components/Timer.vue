@@ -2,7 +2,12 @@
     <div class="panel panel-default">
         <div class="panel-body">
             <h1 class="text-center" v-if="end">{{ minutes | two_digits }}:{{ seconds | two_digits }}</h1>
-            <div class="row">
+            <div class="row" v-if="interval">
+                <div class="col-md-4">
+                    <button class="btn btn-outline-white btn-block" v-on:click="stop()">Stop Timer</button>
+                </div>
+            </div>
+            <div class="row" v-else>
                 <div class="col-md-4">
                     <button class="btn btn-outline-white btn-block" v-on:click="start(25)">25 minutes</button>
                 </div>
@@ -12,11 +17,6 @@
                 <div class="col-md-4">
                     <button class="btn btn-outline-white btn-block" v-on:click="start(60)">60 minutes</button>
                     <button class="btn btn-outline-white btn-block" v-if="! isProduction" v-on:click="start(.25)">.25 minutes</button>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <button class="btn btn-outline-white btn-block" v-on:click="stop()">Stop Timer</button>
                 </div>
             </div>
         </div>
@@ -45,6 +45,7 @@
             },
             stop(event) {
                 clearInterval(this.interval);
+                this.interval = '';
                 this.end = '';
                 this.now = '';
                 if(typeof event !== 'undefined') this.$emit(event);

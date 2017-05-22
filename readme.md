@@ -21,6 +21,7 @@ andreamswick@gmail.com
 - ~~Stop Timer~~
 - ~~Fix beginning glitch~~
 - ~~Show .25 timer only in dev~~
+- ~~Only show stop when timer is running~~
 - Pause Timer
 - Switch icons to something prettier
 - Switch weather api (maybe)
