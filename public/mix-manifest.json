@@ -1,4 +1,9 @@
 {
+<<<<<<< Updated upstream
   "/js/app.js": "/js/app.a978c60311159c5ae88e.js",
   "/css/app.css": "/css/app.f228e3f3bb6ed48bcde798b1cfa06ca5.css"
+=======
+  "/js/app.js": "/js/app.93cb9fd210aef821984b.js",
+  "/css/app.css": "/css/app.75fc3e7dc88ab7a3b58dc910b4549169.css"
+>>>>>>> Stashed changes
 }
