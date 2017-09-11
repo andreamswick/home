@@ -1,20 +1,24 @@
 <template>
     <div class="panel panel-default">
         <div class="panel-body text-center">
-            <h1>{{ time }}</h1>
             <h2>{{ date }}</h2>
+            <h2 v-for="time in times">{{ time }}</h2>
         </div>
     </div>
 </template>
 
 <script>
-    import moment from 'moment';
+    import moment from 'moment-timezone';
 
     export default {
         data () {
             return {
                 date: '',
-                time: ''
+                times: {
+                    central: '',
+                    eastern: '',
+                    pacific: '',
+                }
             }
         },
         props: {
@@ -24,7 +28,7 @@
             },
             timeformat: {
                 type: String,
-                default: 'h:mm a',
+                default: 'h:mm a z',
             }
         },
         created () {
@@ -33,8 +37,10 @@
         },
         methods: {
             refresh () {
-                this.date = moment().format(this.dateformat);
-                this.time = moment().format(this.timeformat);
+                this.date = moment().tz("America/Chicago").format(this.dateformat);
+                this.times.central = moment().tz("America/Chicago").format(this.timeformat);
+                this.times.eastern = moment().tz("America/New_York").format(this.timeformat);
+                this.times.pacific = moment().tz("America/Los_Angeles").format(this.timeformat);
             }
         }
     }
