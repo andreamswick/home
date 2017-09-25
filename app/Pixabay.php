@@ -2,7 +2,6 @@
 
 namespace App;
 
-
 use Carbon\Carbon;
 use Httpful\Request;
 
@@ -22,7 +21,7 @@ class Pixabay
 
     private function transform($pictures)
     {
-        return collect($pictures['hits'])->transform(function($pic) {
+        return collect($pictures['hits'])->transform(function ($pic) {
             return [
                 'image' => $pic['webformatURL'],
                 'user' => $pic['user'],
